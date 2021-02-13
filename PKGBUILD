@@ -29,12 +29,12 @@ sha256sums=('a6003499182520139b34d510228ccdcba12f2504a61d117e90de048ea2f8b6de'
             '4c8b48518b0047672e835e0a6c8a66342b316ab8835cf4c331030de4830dcea2'
             '56d85ff6bf860b9559b8c9f997ad9b1002f3fccc782073760eca505e3bddd176')
 
-pkgver() {
-	cd ${srcdir}/$_pkgname-$pkgver
-	_ver="$(cat CMakeLists.txt | grep -m3 -e "  VERSION" | grep -o "[[:digit:]]*" | xargs | sed s'/ /./g')"
-	_git=".r$(git rev-list --count HEAD).$(git rev-parse --short HEAD)"
-	printf '%s%s' "${_ver}" #"${_git}"
-}
+#pkgver() {
+	#cd ${srcdir}/$_pkgname-$pkgver
+	#_ver="$(cat CMakeLists.txt | grep -m3 -e "  VERSION" | grep -o "[[:digit:]]*" | xargs | sed s'/ /./g')"
+	#_git=".r$(git rev-list --count HEAD).$(git rev-parse --short HEAD)"
+	#printf '%s%s' "${_ver}" #"${_git}"
+#}
 
 prepare() {
 
