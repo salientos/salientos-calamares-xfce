@@ -1,6 +1,6 @@
 # Maintainer: Philip Müller <philm[at]manjaro[dog]org>
 
-pkgname=calamares-xfce
+pkgname=salientos-calamares-xfce
 _pkgname=calamares
 pkgver=3.2.36
 pkgrel=1
