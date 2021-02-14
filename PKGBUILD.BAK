@@ -1,9 +1,8 @@
-# Maintainer: Philip Müller <philm[at]manjaro[dog]org>
+# Maintainer: Philip Müller <philm[at]manjaro[dot]org>
 
 pkgname=salientos-calamares-xfce
 _pkgname=calamares
 pkgver=3.2.36
-_pkgver=3.2.36
 pkgrel=1
 pkgdesc='Distribution-independent installer framework'
 arch=('i686' 'x86_64')
@@ -31,20 +30,18 @@ sha256sums=('a6003499182520139b34d510228ccdcba12f2504a61d117e90de048ea2f8b6de'
             '56d85ff6bf860b9559b8c9f997ad9b1002f3fccc782073760eca505e3bddd176')
 
 prepare() {
-	cd ${srcdir}/calamares-${pkgver}
-	sed -i -e 's/"Install configuration files" OFF/"Install configuration files" ON/' CMakeLists.txt
 
-	# change version
-	sed -i -e "s|$pkgver|$_pkgver|g" CMakeLists.txt
-	_ver="$pkgver"
-	printf 'Version: %s-%s' "${_ver}" "${pkgrel}"
-	sed -i -e "s|\${CALAMARES_VERSION_MAJOR}.\${CALAMARES_VERSION_MINOR}.\${CALAMARES_VERSION_PATCH}|${_ver}-${pkgrel}|g" CMakeLists.txt
-	sed -i -e "s|CALAMARES_VERSION_RC 1|CALAMARES_VERSION_RC 0|g" CMakeLists.txt
+	sed -i -e 's/"Install configuration files" OFF/"Install configuration files" ON/' "$srcdir/${_pkgname}-${pkgver}/CMakeLists.txt"
+	sed -i -e 's/# DEBUG_FILESYSTEMS/DEBUG_FILESYSTEMS/' "$srcdir/${_pkgname}-${pkgver}/CMakeLists.txt"
 
-	# change branding
-	sed -i -e "s/default/salientos/g" src/branding/CMakeLists.txt
+	# add pkgrelease to patch-version
+	cd ${_pkgname}-${pkgver}
+	_patchver="$(cat CMakeLists.txt | grep -m3 -e CALAMARES_VERSION_PATCH | grep -o "[[:digit:]]*" | xargs)"
+	sed -i -e "s|CALAMARES_VERSION_PATCH $_patchver|CALAMARES_VERSION_PATCH $_patchver-$pkgrel|g" CMakeLists.txt
+
 }
 
+#interactiveterminal
 build() {
 	cd $_pkgname-$pkgver
 
@@ -58,7 +55,7 @@ build() {
 	-DWITH_KF5DBus=OFF \
 	-DBoost_NO_BOOST_CMAKE=ON \
 	-DWEBVIEW_FORCE_WEBKIT=OFF \
-	-DSKIP_MODULES="webview tracking interactiveterminal initramfs \
+	-DSKIP_MODULES="webview tracking initramfs \
 	initramfscfg dracut dracutlukscfg \
 	dummyprocess dummypython dummycpp \
 	dummypythonqt services-openrc \
