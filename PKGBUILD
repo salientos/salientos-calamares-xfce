@@ -1,10 +1,10 @@
 # Maintainer: Philip Müller <philm[at]manjaro[dog]org>
 
-pkgname=salientos-calamares-xfce
+pkgname=salientos-calamares
 _pkgname=calamares
 pkgver=3.2.36
 _pkgver=3.2.36
-pkgrel=3
+pkgrel=1
 pkgdesc='Distribution-independent installer framework'
 arch=('i686' 'x86_64')
 license=(GPL)

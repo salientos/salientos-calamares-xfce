@@ -1,3 +1,3 @@
-# calamares-xfce
+# salientos-calamares
 
-Salient OS XFCE - Calamares
+Salient OS - Calamares 3.2.36
