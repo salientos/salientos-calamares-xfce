@@ -69,7 +69,7 @@ build() {
 package() {
 	cd ${_pkgname}-${pkgver}/build
 	make DESTDIR="$pkgdir" install
-	install -Dm644 "${srcdir}/calamares.desktop" "$pkgdir/etc/xdg/autostart/calamares.desktop"
+	install -Dm644 "${srcdir}/calamares.desktop" "$pkgdir/usr/share/applications/calamares.desktop"
 	install -Dm755 "${srcdir}/calamares_polkit" "$pkgdir/usr/bin/calamares_polkit"
 	install -Dm644 "${srcdir}/49-nopasswd-calamares.rules" "$pkgdir/etc/polkit-1/rules.d/49-nopasswd-calamares.rules"
 	chmod 750 "$pkgdir"/etc/polkit-1/rules.d
