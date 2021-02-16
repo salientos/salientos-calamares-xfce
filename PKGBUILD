@@ -25,8 +25,8 @@ source=("$_pkgname-$pkgver::$url/download/v$pkgver/$_pkgname-$pkgver.tar.gz"
 	"calamares_polkit"
 	"49-nopasswd-calamares.rules")
 
-sha256sums=('fa61845bd9e89bf17b5d72d0ff69466a829390b7e9e6f7df00330151669a9868'
-            'd6a5ce002c99586dfa0cb8621cad631f148dfd0d6d234c31643a63c585c546ee'
+sha256sums=('a6003499182520139b34d510228ccdcba12f2504a61d117e90de048ea2f8b6de'
+            'fa61845bd9e89bf17b5d72d0ff69466a829390b7e9e6f7df00330151669a9868'
             '4c8b48518b0047672e835e0a6c8a66342b316ab8835cf4c331030de4830dcea2'
             '56d85ff6bf860b9559b8c9f997ad9b1002f3fccc782073760eca505e3bddd176')
 
