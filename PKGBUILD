@@ -26,7 +26,7 @@ source=("$_pkgname-$pkgver::$url/download/v$pkgver/$_pkgname-$pkgver.tar.gz"
 	"49-nopasswd-calamares.rules")
 
 sha256sums=('a6003499182520139b34d510228ccdcba12f2504a61d117e90de048ea2f8b6de'
-            'fa61845bd9e89bf17b5d72d0ff69466a829390b7e9e6f7df00330151669a9868'
+            '587766808227a9030372ce0b9f43cbaf72e6f2375ba1fd0d2246a8774616dfea'
             '4c8b48518b0047672e835e0a6c8a66342b316ab8835cf4c331030de4830dcea2'
             '56d85ff6bf860b9559b8c9f997ad9b1002f3fccc782073760eca505e3bddd176')
 

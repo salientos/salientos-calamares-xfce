@@ -1,11 +1,11 @@
 [Desktop Entry]
 Type=Application
 Version=1.0
-Name=Install Salient OS
+Name=Salient OS
 GenericName=Salient OS Installer
 Keywords=calamares;system;installer;
 Comment=Install the operating system to disk
-Exec=/usr/bin/calamares_polkit %f
+Exec=pkexec /usr/bin/calamares
 Icon=calamares
 Terminal=false
 StartupNotify=true
