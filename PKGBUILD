@@ -2,9 +2,9 @@
 
 pkgname=salientos-calamares
 _pkgname=calamares
-pkgver=3.2.37
+pkgver=3.2.39
 _pkgver=$pkgver
-pkgrel=2
+pkgrel=1
 pkgdesc='Distribution-independent installer framework'
 arch=('i686' 'x86_64')
 license=(GPL)
@@ -25,7 +25,7 @@ source=("$_pkgname-$pkgver::$url/download/v$pkgver/$_pkgname-$pkgver.tar.gz"
 	"calamares_polkit"
 	"49-nopasswd-calamares.rules")
 
-sha256sums=('2bba7838e0e7d8eec9ae3dcd8aa054a529423f42a977b3d2d12c76ce0a1d7c8f'
+sha256sums=('406772e3d46775120147707e67b8976c5cb1e60c573b618735873e8afd33e3bc'
             '587766808227a9030372ce0b9f43cbaf72e6f2375ba1fd0d2246a8774616dfea'
             '4c8b48518b0047672e835e0a6c8a66342b316ab8835cf4c331030de4830dcea2'
             '56d85ff6bf860b9559b8c9f997ad9b1002f3fccc782073760eca505e3bddd176')
